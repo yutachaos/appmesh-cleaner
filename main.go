@@ -10,13 +10,13 @@ import (
 )
 
 func main() {
-	err := Run()
+	err := run()
 	if err != nil {
 		log.Fatal(err.Error())
 	}
 }
 
-func Run() error {
+func run() error {
 	meshName := flag.String("mesh-name", "", "please specify -mesh-name flag")
 	flag.Parse()
 	if len(*meshName) == 0 {
